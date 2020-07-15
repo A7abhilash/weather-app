@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+    color: white;
+    user-select: none;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+}
+header > h1{
+    font-size: 3.5rem;
+    font-weight: 500;
+    margin: 10px;
+}
+.alert{
+    color: black;
+    font-size: 1rem;
+    padding: 10px;
+    border: 1px ridge black;
+    border-radius: 7px;
+    background-color: yellow;
+    animation: blink 1s infinite 0.5s;
+    text-align: center;
+}
+@keyframes blink{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+.degree-display{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.temperature-degree{
+    font-size: 45px;
+}
+.unit{
+    margin: 10px;
+    font-size: 35px;
+}
+
+@media (min-width: 768px){
+    body{
+        background: linear-gradient(rgb(238, 148, 148),rgb(0, 68, 255));
+    }
+
+    .location , .temperature{
+        height: 30vh;
+        width: 50%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .icon{
+        margin: 30px;
+    }
+    
+    .temperature{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 767px){
+    body{
+        background-color: black;
+    }
+
+    header{
+        color: white;
+    }
+
+    .display {
+        background-color: #343a40;
+        border-radius: 15px;
+        width: 90%;
+        padding: 10px;
+    }   
+    .location-timezone{
+        font-size: 2.5rem;
+        border-bottom: 1px solid black;
+        padding: 10px;
+        margin: 10px;
+        text-align: center;
+    }
+    .icon{
+        height: 15vh;
+        float: right;
+        margin: 10px;
+    }
+    .temperature-description{
+        font-size: 1.5rem;
+        margin-left: 10px;
+        margin-top: 45px;
+        opacity: 0.7;
+    }
+}
