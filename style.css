@@ -33,8 +33,9 @@ header > h1{
     border: 1px ridge black;
     border-radius: 7px;
     background-color: yellow;
-    animation: blink 1s infinite 0.5s;
+    animation: blink 1s infinite ;
     text-align: center;
+    margin: 20px;
 }
 @keyframes blink{
     0%{

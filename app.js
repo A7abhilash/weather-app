@@ -54,6 +54,10 @@ window.onload = function(){
                     .then(function(){
                         $('.alert').css('visibility','hidden')
                     })
+            .catch(error => {
+                console.error('Eror bruh');
+                $('.alert').html('Failed to fetch the details')
+            })
         });
     }
 
