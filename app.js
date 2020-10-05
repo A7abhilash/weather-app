@@ -1,4 +1,5 @@
 window.onload = function(){
+    const APIKEY=""; //Get it from darksky api website
     let longitude;
     let latitude;
 
@@ -16,7 +17,7 @@ window.onload = function(){
             latitude = position.coords.latitude;
 
             const proxy = 'https://cors-anywhere.herokuapp.com/'; // we using this as we are not allowed to fetch the data from api with localhost.
-            const api = `${proxy}https://api.darksky.net/forecast/fd9d9c6418c23d94745b836767721ad1/${latitude},${longitude}`; 
+            const api = `${proxy}https://api.darksky.net/forecast/${APIKEY}/${latitude},${longitude}`; 
             
             fetch(api) //First fetch it from the api
                 .then(response => response.json()) //then- convert the response coming from api into json file
