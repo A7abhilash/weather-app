@@ -9,31 +9,32 @@
   </head>
 
   <body>
-    <header>
-      <h1>Weather APP</h1>
-    </header>
+    <main class="card">
+      <img src="#" alt="weather icon" />
 
-    <p class="alert">
-      Make sure you have internet connectivity and have given
-      access to the location!!! <br>Else try refreshing...
-    </p>
+      <header class="card-header">
+        <h1 class="weather-type">Clear</h1>
+        <h3 class="weather-locale">in Campo Limpo</h3>
+      </header>
 
-    <div class="display">
-      <div class="location">
-        <h1 class="location-timezone"></h1>
-        <canvas class="icon" width="100" height="100"></canvas>
-      </div>
-      
-      <div class="temperature">
-        <div class="degree-display">
-          <h2 class="temperature-degree"></h2>
-          <span class="unit"></span>
-        </div>
+      <main class="card-content">
+        <ul class="weather-details">
+          <li class="weather-details-item">
+            <h4>Humidity</h4>
+            <p class="weather-item-value"></p>
+          </li>
+          
+          <li class="weather-details-item">
+            <h4>Temperature</h4>
+            <p class="weather-item-value"></p>
+          </li>
 
-        <h3 class="temperature-description"></h3>
-      </div>
-    </div>
-
-    <script src="./assets/js/app.js"></script>
+          <li class="weather-details-item">
+            <h4>Wind</h4>
+            <p class="weather-item-value"></p>
+          </li>
+        </ul>
+      </main>
+    </main>
   </body>
 </html>
