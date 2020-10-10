@@ -1,39 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css">
-
+    <link rel="stylesheet" href="./style.css">
     <title>Weather APP</title>
-  </head>
-
-  <body>
+</head>
+<body>
     <header>
-      <h1>Weather APP</h1>
+        <h1>Weather APP</h1>
     </header>
 
     <p class="alert">
-      Make sure you have internet connectivity and have given
-      access to the location!!! <br>Else try refreshing...
+        Make sure you have internet connectivity and have given
+        access to the location!!! <br>Else try refreshing...
     </p>
-
+    
     <div class="display">
-      <div class="location">
-        <h1 class="location-timezone"></h1>
-        <canvas class="icon" width="100" height="100"></canvas>
-      </div>
-      
-      <div class="temperature">
-        <div class="degree-display">
-          <h2 class="temperature-degree"></h2>
-          <span class="unit"></span>
+        <div class="location">
+            <h1 class="location-timezone"></h1>
+            <canvas class="icon" width="100" height="100"></canvas>
         </div>
-
-        <h3 class="temperature-description"></h3>
-      </div>
+        <div class="temperature">
+            <div class="degree-display">
+                <h2 class="temperature-degree"></h2>
+                <span class="unit"></span>
+            </div>
+            <h3 class="temperature-description"></h3>
+        </div>
     </div>
 
-    <script src="./assets/js/app.js"></script>
-  </body>
+    <!--Offline-->
+    <script src="./req/jQuery.js"></script>
+    <script src="./req/skycons.js"></script>
+    <!--Online-->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://gitcdn.link/cdn/darkskyapp/skycons/master/skycons.js"></script>
+
+    <script src="./app.js"></script>
+</body>
 </html>
