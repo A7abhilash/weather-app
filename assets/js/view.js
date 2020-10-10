@@ -1,4 +1,10 @@
 const buildView = (data) => {
+  const cardLoaderElement = document.querySelector(".card.card-loader");
+  cardLoaderElement.classList.toggle('hide')
+
+  const cardElement = document.querySelector(".card");
+  cardElement.classList.toggle('hide')
+
   const weatherStatusElement = document.querySelector("#weather-status");
   weatherStatusElement.innerHTML = data.weatherStatus;
 
@@ -19,8 +25,8 @@ const buildView = (data) => {
 };
 
 const buildViewWithErros = (message) => {
-  const cardElement = document.querySelector(".card");
-  cardElement.classList.toggle("hide");
+  const cardLoaderElement = document.querySelector(".card.card-loader");
+  cardLoaderElement.classList.toggle('hide')
 
   const cardErrorElement = document.querySelector(".card.card-error");
   cardErrorElement.classList.toggle("hide");

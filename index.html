@@ -12,7 +12,7 @@
 </head>
 
 <body>
-  <main class="card">
+  <main class="card hide">
     <img id="card-icon" class="card-icon" src="https://via.placeholder.com/128" alt="weather icon" />
 
     <header class="card-header">
@@ -42,12 +42,22 @@
 
   <main class="card card-error hide">
     <img id="card-icon" class="card-icon"
-      src="https://user-images.githubusercontent.com/6570553/95644843-d2502180-0a8f-11eb-8cf0-c070b095f9a9.png"
+      src="https://user-images.githubusercontent.com/6570553/95645224-725b7a00-0a93-11eb-81bf-2a0e625fc9ba.png"
       alt="weather icon" />
 
     <header class="card-header">
       <h1>Something went wrong</h1>
       <h3>error message</h3>
+    </header>
+  </main>
+
+  <main class="card card-loader">
+    <img id="card-icon" class="card-icon"
+      src="./assets/img/loader.svg"
+      alt="weather icon" />
+
+    <header class="card-header">
+      <h1>Loading</h1>
     </header>
   </main>
 
