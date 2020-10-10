@@ -42,9 +42,6 @@ body {
   margin-top: 24px;
 
   box-shadow: 4px 5px 8px -5px #c9c9c9;
-
-  width: 96px;
-  height: 96px;
 }
 
 .card-header {
@@ -53,13 +50,7 @@ body {
 }
 
 .card-content {
-  width: 100%;
   margin-top: 40px;
-}
-
-.weather-details {
-  display: flex;
-  flex-direction: column;
 }
 
 .weather-details-item {
@@ -103,46 +94,4 @@ h4 {
   text-transform: uppercase;
   color: #00000087;
   letter-spacing: 3px;
-}
-
-@media only screen and (min-width: 769px) {
-  .card {
-    padding: 48px;
-
-    background-image: linear-gradient(to bottom, #e09873 27%, #ffffff 10.001%);
-  }
-
-  .card-icon {
-    width: 128px;
-    height: 128px;
-  }
-
-  .card-header {
-    margin-top: 48px;
-  }
-
-  .card-content {
-    margin-top: 56px;
-  }
-  
-  .weather-details {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-  }
-
-  .weather-details-item {
-    margin-top: 0;
-    margin-left: 24px;
-
-    border-right: 1px solid #e0e0e0;
-    border-bottom: none;
-
-    padding-right: 48px;
-    padding-bottom: 0;
-  }
-
-  .weather-details-item:last-child {
-    border-right: none;
-  }
 }
