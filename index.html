@@ -1,45 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/style.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Weather APP</title>
-  </head>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.css">
 
-  <body>
-    <main class="card">
-      <img id="card-icon" class="card-icon" src="https://via.placeholder.com/128" alt="weather icon" />
+  <title>Weather APP</title>
+</head>
 
-      <header class="card-header">
-        <h1 id="weather-status" class="weather-type">Clear</h1>
-        <h3 id="city" class="weather-locale">in Campo Limpo</h3>
-      </header>
+<body>
+  <main class="card">
+    <img id="card-icon" class="card-icon" src="https://via.placeholder.com/128" alt="weather icon" />
 
-      <main class="card-content">
-        <ul class="weather-details">
-          <li class="weather-details-item">
-            <h4>Humidity</h4>
-            <p id="humidity" class="weather-item-value">9%</p>
-          </li>
+    <header class="card-header">
+      <h1 id="weather-status" class="weather-type">Clear</h1>
+      <h3 id="city" class="weather-locale">in Somewhere</h3>
+    </header>
 
-          <li class="weather-details-item">
-            <h4>Temperature</h4>
-            <p id="temperature" class="weather-item-value">85 °C</p>
-          </li>
+    <main class="card-content">
+      <ul class="weather-details">
+        <li class="weather-details-item">
+          <h4>Humidity</h4>
+          <p id="humidity" class="weather-item-value">9%</p>
+        </li>
 
-          <li class="weather-details-item">
-            <h4>Wind</h4>
-            <p id="wind" class="weather-item-value">6 MHP</p>
-          </li>
-        </ul>
-      </main>
+        <li class="weather-details-item">
+          <h4>Temperature</h4>
+          <p id="temperature" class="weather-item-value">23 °C</p>
+        </li>
+
+        <li class="weather-details-item">
+          <h4>Wind</h4>
+          <p id="wind" class="weather-item-value">6 km/h</p>
+        </li>
+      </ul>
     </main>
+  </main>
 
-    <script src="./assets/js/api.js"></script>
-    <script src="./assets/js/view.js"></script>
-  </body>
+  <main class="card card-error hide">
+    <img id="card-icon" class="card-icon"
+      src="https://user-images.githubusercontent.com/6570553/95644843-d2502180-0a8f-11eb-8cf0-c070b095f9a9.png"
+      alt="weather icon" />
+
+    <header class="card-header">
+      <h1>Something went wrong</h1>
+      <h3>error message</h3>
+    </header>
+  </main>
+
+  <script src="./assets/js/api.js"></script>
+  <script src="./assets/js/view.js"></script>
+</body>
+
 </html>

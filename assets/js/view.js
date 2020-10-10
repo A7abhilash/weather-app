@@ -18,6 +18,20 @@ const buildView = (data) => {
   cardIconElement.src = `http://openweathermap.org/img/wn/${data.weatherIcon}@2x.png`;
 };
 
+const buildViewWithErros = (message) => {
+  const cardElement = document.querySelector(".card");
+  cardElement.classList.toggle("hide");
+
+  const cardErrorElement = document.querySelector(".card.card-error");
+  cardErrorElement.classList.toggle("hide");
+
+  const errorDescriptionElement = document.querySelector(
+    ".card.card-error .card-header h3"
+  );
+
+  errorDescriptionElement.innerHTML = message;
+};
+
 window.onload = async () => {
   const success = (position) => {
     const latitude = position.coords.latitude;
@@ -34,11 +48,11 @@ window.onload = async () => {
   };
 
   const error = () => {
-    console.log("Unable to retrieve your location");
+    buildViewWithErros("Unable to retrieve your location");
   };
 
   if (!navigator.geolocation) {
-    console.log("Geolocation is not supported by your browser");
+    buildViewWithErros("Geolocation is not supported by your browser");
   } else {
     navigator.geolocation.getCurrentPosition(success, error);
   }
