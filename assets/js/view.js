@@ -40,36 +40,54 @@ const buildViewWithErros = (message) => {
 
 
 const buildTheme = (weatherData) => {
-  const condition = weatherData.weatherArr[0].main || ''; 
+  const condition = weatherData.weatherArr[0].main || '';
+
+  const date_time = new Date(); // for now
+  const current_hrs = date_time.getHours();
+
+  let theme_color;
+
   switch(condition) {
     case "Thunderstorm":
-      document.body.style.backgroundColor = "#778ca3";
-      document.getElementById("card-icon").style.backgroundColor = "#778ca3";
+      theme_color = "#778ca3"
       break;
+
     case "Rain":
-      document.body.style.backgroundColor = "#487eb0";
-      document.getElementById("card-icon").style.backgroundColor = "#487eb0";
+      theme_color = "#487eb0";
       break;
+
     case "Drizzle":
-      document.body.style.backgroundColor = "#45aaf2";
-      document.getElementById("card-icon").style.backgroundColor = "#45aaf2";
+      theme_color = "#45aaf2";
       break;
+
     case "Clouds":
-      document.body.style.backgroundColor = "#d1d8e0";
-      document.getElementById("card-icon").style.backgroundColor = "#d1d8e0";
+      theme_color = "#d1d8e0";
       break;
+
     case "Snow":
-      document.body.style.backgroundColor = "#dfe6e9";
-      document.getElementById("card-icon").style.backgroundColor = "#dfe6e9";
+      theme_color = "#dfe6e9";
       break;
+
     case "Clear":
-      document.body.style.backgroundColor = "#2d98da";
-      document.getElementById("card-icon").style.backgroundColor = "#2d98da";
+
+      if(current_hrs > 0 && current_hrs <= 6){
+        theme_color = "#192a56";
+      }else if(current_hrs > 6 && current_hrs <= 12){
+        theme_color = "#2d98da";
+      }else if(current_hrs > 12 && current_hrs < 18){
+        theme_color = "#ff7f50";
+      }else{
+        theme_color = "#192a56";
+      }
+
       break;
+
     default:
-      document.body.style.backgroundColor = "#314570";
-      document.getElementById("card-icon").style.backgroundColor = "#314570";
+      theme_color = "#314570";
   }
+
+  document.body.style.backgroundColor = theme_color;
+  document.getElementById("card-icon").style.backgroundColor = theme_color;
 }
 
 
