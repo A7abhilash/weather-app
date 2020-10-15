@@ -19,7 +19,8 @@ const openWeatherApi = (() => {
       wind: data.wind.speed,
       temperature: data.main.temp,
       weatherStatus: description,
-      weatherIcon: icon
+      weatherIcon: icon,
+      weatherArr: data.weather
     };
   };
 
