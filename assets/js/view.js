@@ -38,6 +38,41 @@ const buildViewWithErros = (message) => {
   errorDescriptionElement.innerHTML = message;
 };
 
+
+const buildTheme = (weatherData) => {
+  const condition = weatherData.weatherArr[0].main || ''; 
+  switch(condition) {
+    case "Thunderstorm":
+      document.body.style.backgroundColor = "#778ca3";
+      document.getElementById("card-icon").style.backgroundColor = "#778ca3";
+      break;
+    case "Rain":
+      document.body.style.backgroundColor = "#487eb0";
+      document.getElementById("card-icon").style.backgroundColor = "#487eb0";
+      break;
+    case "Drizzle":
+      document.body.style.backgroundColor = "#45aaf2";
+      document.getElementById("card-icon").style.backgroundColor = "#45aaf2";
+      break;
+    case "Clouds":
+      document.body.style.backgroundColor = "#d1d8e0";
+      document.getElementById("card-icon").style.backgroundColor = "#d1d8e0";
+      break;
+    case "Snow":
+      document.body.style.backgroundColor = "#dfe6e9";
+      document.getElementById("card-icon").style.backgroundColor = "#dfe6e9";
+      break;
+    case "Clear":
+      document.body.style.backgroundColor = "#2d98da";
+      document.getElementById("card-icon").style.backgroundColor = "#2d98da";
+      break;
+    default:
+      document.body.style.backgroundColor = "#314570";
+      document.getElementById("card-icon").style.backgroundColor = "#314570";
+  }
+}
+
+
 window.onload = async () => {
   const success = (position) => {
     const latitude = position.coords.latitude;
@@ -50,6 +85,7 @@ window.onload = async () => {
       );
 
       buildView(response);
+      buildTheme(response);
     })();
   };
 
